@@ -1,6 +1,6 @@
-# MAY - Multi-Agent AI System
+# OptiMesh: A Multi-Agent Framework for Dynamic Resource Orchestration
 
-MAY is an intelligent multi-agent AI system designed to automate laptop operations through hierarchical agent control, resource management, and continuous learning capabilities.
+Optimesh is an intelligent multi-agent AI system designed to automate laptop operations through hierarchical agent control, resource management, and continuous learning capabilities.
 
 ## Architecture
 
@@ -16,7 +16,7 @@ MAY is an intelligent multi-agent AI system designed to automate laptop operatio
 ## Project Structure
 
 ```
-MAY/
+Optimesh/
 ├── agents/
 │   ├── child_agent/      # Basic laptop operation executor
 │   ├── parent_agent/     # Supervisor and prompt refiner
@@ -42,7 +42,7 @@ MAY/
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd MAY
+cd Optimesh
 
 # Create virtual environment
 python -m venv venv
