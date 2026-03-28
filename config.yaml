@@ -1,7 +1,7 @@
 # MAY System Configuration
 
 system:
-  name: "MAY"
+  name: "OptiMesh"
   version: "0.1.0"
   environment: "development"
 

@@ -120,11 +120,11 @@ class MAYSystem:
             try:
                 command = input("\nMAY> ").strip().lower()
                 
-                if command == "quit":
+                if command == "quit" or command == "exit":
                     break
-                elif command == "status":
+                elif command == "status" or command == "sys":
                     await self.get_system_status()
-                elif command == "cpu":
+                elif command == "cpu" or command == "cpu_info":
                     await self._show_cpu_info()
                 elif command == "memory":
                     await self._show_memory_info()
@@ -206,12 +206,12 @@ class MAYSystem:
         action = AgentAction(
             action_id="top_procs",
             action_type="get_top_processes",
-            parameters={'limit': 10, 'sort_by': 'cpu'}
+            parameters={'limit': 10, 'sort_by': 'memory_percent'}
         )
         result = await self.child_agent.execute_action(action)
         
         if result.success:
-            print("\nTop 10 Processes by CPU:")
+            print("\nTop 10 Processes by Memory:")
             print("-" * 70)
             for i, proc in enumerate(result.result, 1):
                 print(f"{i:2}. {proc['name']:<30} PID: {proc['pid']:<8} CPU: {proc['cpu_percent']:>5}%  MEM: {proc['memory_mb']:>8.1f} MB")
